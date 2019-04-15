@@ -1,0 +1,14 @@
+body{
+	margin:0;
+	padding:0;
+	background: linear-gradient(to bottom, #9900ff 0%, #99ccff 100%);
+	
+}
+
+.board{
+	
+	width:30%;
+	height: 96vh;
+	margin:2vh auto;
+	background:linear-gradient(#0000ff,#0000cc);
+}
