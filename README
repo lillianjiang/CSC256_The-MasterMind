@@ -1,3 +1,4 @@
-#CSC 256 The MasterMind text-based implementation
+#CSC 256 The MasterMind implementation
 
-Before 3/4, finish text-based mastermind game. 
+Inside public_html file, I wrote a Mastermind game with GUI.
+It can be open on http://zapp.smith.edu/~cs256b-ag/index.html
