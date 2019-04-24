@@ -59,8 +59,9 @@ body{
 	margin:auto;
 	text-align:center;
 	box-shadow: 2px 2px 6px black;
+}
 
-.start{
+.start {
   position: absolute;
   top: 0;
   left: 0;

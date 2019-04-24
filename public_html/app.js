@@ -9,21 +9,18 @@ $(document).ready(function() {
   $('.submit-btn').hide();
   let clickCount = 0;
   let isSelected = false;
-  
+  let answerRay = makeAnswer();
   let tempRay = $('.guess-pegs');
   let guessBoxArray = [];
   let nextGrade = $($('.first-grade')[0]).parent()[0];
   let isWin = false;
-  let answerRay = makeAnswer();
   let starttrigger = false;
 
-$('.modal').fadeIn(200);
   if(!starttrigger){
     $('.start').fadeIn(500);
   }
   $('.start-button').click(function(){
      starttrigger=true;
-     // console.log(starttrigger);
      $('.start').hide();
   });
   
