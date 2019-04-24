@@ -2,13 +2,250 @@ body{
 	margin:0;
 	padding:0;
 	background: linear-gradient(to bottom, #9900ff 0%, #99ccff 100%);
-	
+	/*font-family: 'Inconsolata', monospace;*/
+	font-family: 'Russo One', sans-serif;
+}
+
+.flexer{
+	display:flex;
+}
+
+.modal {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(255, 255, 255, 0.5);
+  text-align: center;
+  display: none;
+}
+
+.modal-message {
+  width: 40%;
+  margin: 30% auto;
+}
+
+.modal-restart{
+	width:50%;
+	height:50%;
+	background: linear-gradient(#9900ff 50%,#9900ff);
+	margin:auto;
+	text-align:center;
+	box-shadow: 2px 2px 6px black;
+	/*line-height: 400%;*/
+}
+
+.lose{
+	  position: absolute;
+	  top: 0;
+	  left: 0;
+	  width: 100%;
+	  height: 100vh;
+	  background-color: rgba(255, 255, 255, 0.5);
+	  text-align: center;
+	  display: none;
+}
+
+.lose-message{
+  width: 40%;
+  margin: 30% auto;
+}
+
+.lose-restart{
+	width:50%;
+	height:50%;
+	background: linear-gradient(#9900ff 50%,#9900ff);
+	margin:auto;
+	text-align:center;
+	box-shadow: 2px 2px 6px black;
+
+.start{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(255, 255, 255, 0.7);
+  text-align: center;
+  display: none;
+}
+
+.start-button {
+	width:10%;
+	height:10%;
+	background: linear-gradient(to bottom, #9900ff 0%, #99ccff 100%);
+	margin:auto;
+	text-align:center;
+	box-shadow: 2px 2px 6px black;
+	line-height: 500%;
 }
 
 .board{
-	
 	width:30%;
+	min-width: 450px;
 	height: 96vh;
 	margin:2vh auto;
-	background:linear-gradient(#0000ff,#0000cc);
+	background:linear-gradient(#5A7EE8,#5A7EE8);
+	box-shadow: 10px 10px 15px black;
 }
+
+
+/***** answer-container ******/
+.answer-container{
+	box-sizing: border-box;
+	width: 100%;
+	height:10%;
+	/*border: 1px solid black;*/
+	padding-top: 2%;
+}
+
+.answer-box{
+	width:70%;
+	height:100%;
+	/*border: 1px solid red;*/
+}
+
+.answer{
+	width:80%;
+	height:80%;
+	border: 1px solid black;
+	margin:0 auto;
+	background: linear-gradient(#D3D3D3,#A9A9A9);
+	box-shadow: 2px 0px 4px black;
+}
+
+.button-container{
+	width:30%;
+	height:100%;
+	/*border: 1px solid red;*/
+}
+.submit-btn{
+	width:80%;
+	height:80%;
+	background: linear-gradient(#D3D3D3,#A9A9A9);
+	margin:auto;
+	text-align:center;
+	line-height: 250%;
+	box-shadow: 2px 2px 4px black;
+}
+
+.submit-btn:hover{
+	background: linear-gradient(white,#A9A9A9);
+	transform: scale(1.1);
+}
+
+.text{
+	margin:auto;
+	line-height: 275%;
+}
+
+/***** guess-container ******/
+.guess-container{
+	/*box-sizing: border-box;*/
+	width: 100%;
+	height:80%;
+	/*border: 1px solid black;*/
+}
+
+.guess-row{
+	box-sizing: border-box;
+	height:10%;
+	width:100%;
+	border-top: 1px solid white;
+}
+
+.guess-pegs{
+	height:100%;
+	width:70%;
+	padding:0 5%;
+	/*border:1px solid white;*/
+}
+
+.guess-peg{
+
+	width:21%;
+	height:100%;
+	border:1px solid white;
+	border-radius: 50%;
+	margin-left:2%;
+	padding:0 5%;
+	background: linear-gradient(#3400EB,#0C60E8,#3400EB,#0C60E8);
+
+}
+.grade-pegs{
+	height:100%;
+	width:25%;
+	border-left:1px solid white;
+	flex-wrap:wrap;
+	padding:0 5%;
+}
+
+.grade-peg{
+	 box-sizing: border-box;
+     width: 37%;
+	 height: 50%;
+	 border: 1px solid black;
+	 margin-left: 5%;
+	 border-radius: 50%;
+	 background: linear-gradient(#3400EB, #000066);
+}
+
+/***** selection-container ******/
+.selection-container{
+	/*box-sizing: border-box;*/
+	width: 100%;
+	height:10%;
+	padding-top:2px;
+	border: 1px solid black;
+}
+
+.selector-outer {
+  box-sizing: border-box;
+  width: 16%;
+  height: 82%;
+  border-radius: 50%;
+  margin: 0 .25px;
+  border: 1px solid black;
+}
+
+.selector-outer:hover {
+  border: 1px solid white;
+}
+
+.selector-inner {
+  box-sizing: border-box;
+  width: 60%;
+  height: 60%;
+  border-radius: 50%;
+  border: 1px solid black;
+  margin: 18% 18% 22% 22%;
+}
+
+.selector-inner:hover {
+  transform: scale(1.3);
+  border: 1px solid white;
+}
+
+.red {
+  background-color: red;
+}
+ .green {
+   background-color: green;
+ }
+
+ .yellow {
+   background-color: yellow;
+ }
+
+ .black {
+   background-color: black;
+ }
+
+ .white {
+   background-color: white;
+ }
+
+ .brown {
+   background-color: brown;
+ }

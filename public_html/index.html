@@ -1,31 +1,226 @@
+
 <!DOCTYPE html>
 <html>
-	<head>
-	 <meta charser="utf-8">
-	 <link rel="stylesheet" href="main.css">
-	 <title>Mastermind</title>
-	</head>
-	<body>
-	 <div class="board">
-		<div class="shield flexer">
-			<div class="shield-box">
+  <head>
+    <meta charset="utf-8">
+    <link href="https://fonts.googleapis.com/css?family=Russo+One" rel="stylesheet">
+    <link rel="stylesheet" href="main.css">
+    <title>Mastermind</title>
+  </head>
+  <div class="modal">
+    <div class="modal-message">
+      <h2>٩̋(๑˃́ꇴ˂̀๑)</h2>
+      <h2>You Won!</h2>
+      <div class="modal-restart">
+      	<a href="http://zapp.smith.edu/~cs256b-ag/index.html">RESTART</a></div>
+    </div>
+  </div>
+  <div class="lose">
+    <div class="lose-message">
+      <h2>You lose __:(´ཀ`」∠):__</h2>
+      <h2>Do you want to start again?</h2>
+      <div class="lose-restart">
+      	<a href="http://zapp.smith.edu/~cs256b-ag/index.html">RESTART</a></div>
+    </div>
+  </div>
+<!--  
+<div onclick="location.href='http://zapp.smith.edu/~cs256b-ag/index.html'" type="start-button">Start
+</div> -->
+<div class="start">
+	<h1>Welcome to Mastermind, hacker!</h1>
+	<h3>You can choose four kegs from your pockets.</h3>
+	<h3>Your mission is to break the secret code made by RANDOM in 10 steps.</h3>
+	<h3>After you submit your guesses, the rightside bar will show feedback.</h3>
+	<h3> A black keg = One of your kegs in the right position and has the right color as the secret code.</h3>
+	<h3> A white Keg = One of your kegs has the right color, but not the right position. </h3>
+	<h1>If you are ready, hit the START button!</h1>
+	<div class="start-button">START</div>
+</div>
 
-			</div>
-			<div class="button-container">
-			 <div class="submit-btn">
-			  <h3 class="text"></h3>
-			 </div>
-			</div>
-		</div>
 
-		<div class="guess flexer">
-		
-		</div>
 
-		<div class="kegs flexer">
-
-		</div>
-	 </div>
-
-	</body>
+  <body>
+    <div class="board">
+      <div class="answer-container flexer">
+        <div class="answer-box">
+          <div class="answer"></div>
+        </div>
+        <div class="button-container">
+          <div class="submit-btn">
+            <h3 class="text">SUBMIT</h3>
+          </div>
+        </div>
+      </div>
+      <div class="guess-container">
+        <div class="guess-row flexer">
+          <div class="guess-pegs flexer">
+            <div class="guess-peg"></div>
+            <div class="guess-peg"></div>
+            <div class="guess-peg"></div>
+            <div class="guess-peg"></div>
+          </div>
+          <div class="grade-pegs flexer">
+            <div class="grade-peg"></div>
+            <div class="grade-peg"></div>
+            <div class="grade-peg"></div>
+            <div class="grade-peg"></div>
+          </div>
+        </div>
+        <div class="guess-row flexer">
+          <div class="guess-pegs flexer">
+            <div class="guess-peg"></div>
+            <div class="guess-peg"></div>
+            <div class="guess-peg"></div>
+            <div class="guess-peg"></div>
+          </div>
+          <div class="grade-pegs flexer">
+            <div class="grade-peg"></div>
+            <div class="grade-peg"></div>
+            <div class="grade-peg"></div>
+            <div class="grade-peg"></div>
+          </div>
+        </div>
+        <div class="guess-row flexer">
+          <div class="guess-pegs flexer">
+            <div class="guess-peg"></div>
+            <div class="guess-peg"></div>
+            <div class="guess-peg"></div>
+            <div class="guess-peg"></div>
+          </div>
+          <div class="grade-pegs flexer">
+            <div class="grade-peg"></div>
+            <div class="grade-peg"></div>
+            <div class="grade-peg"></div>
+            <div class="grade-peg"></div>
+          </div>
+        </div>
+        <div class="guess-row flexer">
+          <div class="guess-pegs flexer">
+            <div class="guess-peg"></div>
+            <div class="guess-peg"></div>
+            <div class="guess-peg"></div>
+            <div class="guess-peg"></div>
+          </div>
+          <div class="grade-pegs flexer">
+            <div class="grade-peg"></div>
+            <div class="grade-peg"></div>
+            <div class="grade-peg"></div>
+            <div class="grade-peg"></div>
+          </div>
+        </div>
+        <div class="guess-row flexer">
+          <div class="guess-pegs flexer">
+            <div class="guess-peg"></div>
+            <div class="guess-peg"></div>
+            <div class="guess-peg"></div>
+            <div class="guess-peg"></div>
+          </div>
+          <div class="grade-pegs flexer">
+            <div class="grade-peg"></div>
+            <div class="grade-peg"></div>
+            <div class="grade-peg"></div>
+            <div class="grade-peg"></div>
+          </div>
+        </div>
+        <div class="guess-row flexer">
+          <div class="guess-pegs flexer">
+            <div class="guess-peg"></div>
+            <div class="guess-peg"></div>
+            <div class="guess-peg"></div>
+            <div class="guess-peg"></div>
+          </div>
+          <div class="grade-pegs flexer">
+            <div class="grade-peg"></div>
+            <div class="grade-peg"></div>
+            <div class="grade-peg"></div>
+            <div class="grade-peg"></div>
+          </div>
+        </div>
+        <div class="guess-row flexer">
+          <div class="guess-pegs flexer">
+            <div class="guess-peg"></div>
+            <div class="guess-peg"></div>
+            <div class="guess-peg"></div>
+            <div class="guess-peg"></div>
+          </div>
+          <div class="grade-pegs flexer">
+            <div class="grade-peg"></div>
+            <div class="grade-peg"></div>
+            <div class="grade-peg"></div>
+            <div class="grade-peg"></div>
+          </div>
+        </div>
+        <div class="guess-row flexer">
+          <div class="guess-pegs flexer">
+            <div class="guess-peg"></div>
+            <div class="guess-peg"></div>
+            <div class="guess-peg"></div>
+            <div class="guess-peg"></div>
+          </div>
+          <div class="grade-pegs flexer">
+            <div class="grade-peg"></div>
+            <div class="grade-peg"></div>
+            <div class="grade-peg"></div>
+            <div class="grade-peg"></div>
+          </div>
+        </div>
+        <div class="guess-row flexer">
+          <div class="guess-pegs flexer">
+            <div class="guess-peg"></div>
+            <div class="guess-peg"></div>
+            <div class="guess-peg"></div>
+            <div class="guess-peg"></div>
+          </div>
+          <div class="grade-pegs flexer">
+            <div class="grade-peg"></div>
+            <div class="grade-peg"></div>
+            <div class="grade-peg"></div>
+            <div class="grade-peg"></div>
+          </div>
+        </div>
+        <div class="guess-row flexer">
+          <div class="guess-pegs flexer">
+            <div class="guess-peg active"></div>
+            <div class="guess-peg active"></div>
+            <div class="guess-peg active"></div>
+            <div class="guess-peg active"></div>
+          </div>
+          <div class="grade-pegs flexer first-grade">
+            <div class="grade-peg"></div>
+            <div class="grade-peg"></div>
+            <div class="grade-peg"></div>
+            <div class="grade-peg"></div>
+          </div>
+        </div>
+      </div>
+      <div class="selection-container flexer">
+        <div class="selector-outer">
+          <div class="selector-inner red">
+          </div>
+        </div>
+        <div class="selector-outer">
+          <div class="selector-inner green">
+          </div>
+        </div>
+        <div class="selector-outer">
+          <div class="selector-inner yellow">
+          </div>
+        </div>
+        <div class="selector-outer">
+          <div class="selector-inner black">
+          </div>
+        </div>
+        <div class="selector-outer">
+          <div class="selector-inner white">
+          </div>
+        </div>
+        <div class="selector-outer">
+          <div class="selector-inner brown">
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="app.js"></script>
+  </body>
 </html>
